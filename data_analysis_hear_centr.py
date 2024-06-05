@@ -1,3 +1,5 @@
+
+
 import networkx as nx
 import numpy as np
 import pandas as pd
@@ -43,10 +45,13 @@ def calculate_hearing_centrality_all(df, c_value, delta_value):
 
     # Adjust the loop to cover the infected nodes you're interested in (0 through 499)
     for infected_node in range(500):
+        #Exclude rows where initial_infected_node is equal to infected_node
+        filtered_pool = filtered_data[filtered_data['initial_infected_node'] != infected_node]
+
         # Select 1000 random rows for the current node
         random_indices = random.sample(range(len(filtered_data)), k=1000)
         #c
-        selected_rows = filtered_data.iloc[random_indices].copy()
+        selected_rows = filtered_pool.iloc[random_indices].copy()
         #c
         # Convert ever_infected from string to numerical lists only for the selected rows
         selected_rows['ever_infected'] = selected_rows['ever_infected'].apply(lambda x: [int(num) for num in x.split()])
