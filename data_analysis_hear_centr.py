@@ -49,7 +49,7 @@ def calculate_hearing_centrality_all(df, c_value, delta_value):
         filtered_pool = filtered_data[filtered_data['initial_infected_node'] != infected_node]
 
         # Select 1000 random rows for the current node
-        random_indices = random.sample(range(len(filtered_data)), k=1000)
+        random_indices = random.sample(range(len(filtered_pool)), k=1000)
         #c
         selected_rows = filtered_pool.iloc[random_indices].copy()
         #c
