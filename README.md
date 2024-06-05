@@ -1,5 +1,9 @@
 # Rumour-centrality
 
+**sending centrality**: Simulate infection of a node x times, and see what percentage of people he infects, on average
+
+**hearing centrality**: Sample a percentage of all simulations for all the nodes. See in what percentage of them the node in question was infected. 
+
   - **SIR_raw_data**: Generates the raw data for subsequent analysis. Ran 1000 SIR simulations for each node.
   - **data_analysis_hear_centr.py**: Computes the hearing centrality for all nodes and all pairs of c and delta. Took around 5h40 to run. Output is in Data/hear_send_merged.csv 
   - **data_analysis_sending_centr_parallel.py**:  Computes the hearing centrality for all nodes and all pairs of c and delta. Takes over 8 hours to run. The code uses parallel processing to reduce running time. Output is in **Data/hear_send_merged.csv**
