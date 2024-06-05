@@ -1,6 +1,6 @@
 # Rumour-centrality
 
-**sending centrality**: Simulate infection of a node x times, and see what percentage of people he infects, on average
+**sending centrality**: Simulate infection of a node x times, and see what percentage of nodes he infects, on average.
 
 **hearing centrality**: Sample a percentage of all simulations for all the nodes. See in what percentage of them the node in question was infected. 
 
